@@ -1,0 +1,235 @@
+.cinema-top {
+  background-color: #636775;
+  padding: 32rpx 32rpx 70rpx 32rpx;
+  position: relative;
+}
+.cinema-top .tops-item {
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+}
+.cinema-top .cinema-img {
+  width: 160rpx;
+  height: 222rpx;
+}
+.cinema-top .cinema-img image {
+  width: 160rpx;
+  height: 222rpx;
+  border-radius: 20rpx;
+}
+.cinema-top .cinema-info {
+  margin-left: 30rpx;
+}
+.cinema-top .cinema-info .top-name {
+  color: #FFFFFF;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.cinema-top .cinema-info .list-tel {
+  color: #D8D8DD;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.cinema-main {
+  position: absolute;
+  top: 290rpx;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  border-radius: 30rpx 30rpx 0rpx 0rpx;
+  padding-bottom: 120rpx;
+}
+.support {
+  margin: 40rpx 32rpx 0rpx 32rpx;
+  background-color: #FFEFEE;
+  border-radius: 8rpx;
+  padding: 22rpx 25rpx;
+  display: flex;
+  align-items: center;
+}
+.support image {
+  width: 28rpx;
+  height: 28rpx;
+}
+.support text {
+  color: #F03D38;
+  font-size: 24rpx;
+  margin-left: 12rpx;
+}
+.seat-item {
+  margin: 50rpx 32rpx 9rpx 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28rpx;
+}
+.seat-item .seat-text {
+  color: #636775;
+}
+.seat-item .seat-val {
+  color: #2D3039;
+}
+.automatic-item {
+  padding: 32rpx;
+  display: flex;
+  align-items: center;
+}
+.automatic-item .aut-tops {
+  display: flex;
+  align-items: center;
+}
+.automatic-item .aut-tops image {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 16rpx;
+}
+.automatic-item .aut-tops text {
+  color: #636775;
+  font-size: 28rpx;
+}
+.automatic-item .aut-tips {
+  margin-top: 4rpx;
+  color: #FE602B;
+  font-size: 24rpx;
+}
+.lines {
+  height: 20rpx;
+  background-color: #F3F4F7;
+}
+.price-item {
+  background-color: #FFFFFF;
+  padding: 20rpx 32rpx;
+}
+.price-item .pirce-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0rpx;
+  font-size: 28rpx;
+}
+.price-item .pirce-list .pirce-text {
+  color: #636775;
+}
+.price-item .pirce-list .pirce-val {
+  color: #2D3039;
+}
+.price-item .pirce-list .pirce-vals {
+  color: #FE602B;
+}
+.price-item .pirce-list .pirce-valss {
+  color: #FE602B;
+  font-weight: 550;
+}
+.order-phone-item {
+  padding: 20rpx 0rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order-phone-item .pho-text {
+  color: #636775;
+  font-size: 29rpx;
+}
+.order-phone-item .phone-tips {
+  margin-top: 4rpx;
+  color: #A6A8AE;
+  font-size: 24rpx;
+}
+.order-phone-item .phone-input {
+  font-size: 28rpx;
+  width: 32%;
+}
+.ticket-notice {
+  padding: 40rpx 56rpx 40rpx 32rpx;
+  background-color: #FFFFFF;
+}
+.ticket-notice .not-text {
+  color: #2D3039;
+  font-size: 28rpx;
+  font-weight: 550;
+}
+.ticket-notice .not-list {
+  display: flex;
+  margin-top: 20rpx;
+  color: #636775;
+  font-size: 28rpx;
+}
+.ticket-notice .not-list text {
+  color: #F03D38;
+  font-weight: 550;
+}
+.agreement {
+  display: flex;
+  align-items: center;
+  background-color: #F2F5FA;
+  padding: 24rpx 30rpx;
+}
+.agreement image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.agreement text {
+  color: #2D3039;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+.congirm-boom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120rpx;
+  z-index: 9999;
+  padding-left: 48rpx;
+  padding-right: 40rpx;
+}
+.congirm-boom-nav .nav-lefts {
+  display: flex;
+  align-items: center;
+}
+.congirm-boom-nav .nav-lefts .shiji {
+  color: #636775;
+  font-size: 24rpx;
+  margin-top: 4rpx;
+}
+.congirm-boom-nav .nav-lefts .units {
+  color: #FE602B;
+  font-size: 28rpx;
+  font-weight: 550;
+  margin-left: 18rpx;
+  margin-top: 4rpx;
+}
+.congirm-boom-nav .nav-lefts .shiji-val {
+  color: #FE602B;
+  font-size: 42rpx;
+  font-weight: 550;
+}
+.congirm-boom-nav .go-pay {
+  width: 230rpx;
+  height: 92rpx;
+  text-align: center;
+  line-height: 92rpx;
+  background-color: #FE602B;
+  border-radius: 46rpx;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.rule-title {
+  text-align: center;
+  padding-top: 30rpx;
+  color: #292928;
+  font-size: 36rpx;
+  font-weight: 550;
+}
+.rule-content {
+  padding: 35rpx 35rpx 50rpx 35rpx;
+  color: #636775;
+  font-size: 28rpx;
+  line-height: 46rpx;
+}
+

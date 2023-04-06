@@ -1,0 +1,80 @@
+page {
+  background-color: #F4F5F7;
+}
+.tick-tab-list {
+  display: flex;
+  background-color: #FFFFFF;
+  padding: 30rpx 0rpx;
+  align-items: center;
+}
+.tick-tab-list .tick-tab-item {
+  width: 16.66%;
+  text-align: center;
+  color: #636775;
+  font-size: 28rpx;
+  position: relative;
+}
+.tick-tab-list .tab-sel {
+  color: #2D3039 !important;
+  font-size: 32rpx!important;
+  font-weight: 550;
+}
+.tick-tab-list .bottoms {
+  position: absolute;
+  bottom: -30rpx;
+  right: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 52rpx;
+  height: 8rpx;
+  background-color: #FE602B;
+}
+.tick-lists {
+  margin: 20rpx 32rpx 0rpx 32rpx;
+  background-color: #FFFFFF;
+  border-radius: 20rpx;
+  padding: 30rpx 32rpx;
+}
+.tick-lists .tick-list-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tick-lists .tick-list-top .tock-shop-name {
+  color: #636775;
+  font-size: 28rpx;
+  width: 80%;
+}
+.tick-lists .tick-list-top .tock-list-status {
+  color: #FE602B;
+  font-size: 28rpxsssssssss;
+}
+.tick-lists .tick-list-info {
+  margin-top: 28rpx;
+  display: flex;
+}
+.tick-lists .tick-list-info .film-cover {
+  width: 116rpx;
+  height: 140rpx;
+}
+.tick-lists .tick-list-info .film-cover image {
+  width: 116rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+}
+.tick-lists .tick-list-info .film-list-ret {
+  margin-left: 20rpx;
+}
+.tick-lists .tick-list-info .film-list-ret .film-name {
+  color: #2D3039;
+  font-size: 32rpx;
+  font-weight: 550;
+  margin-top: 8rpx;
+}
+.tick-lists .tick-list-info .film-list-ret .film-time {
+  color: #636775;
+  font-size: 28rpx;
+  margin-top: 16rpx;
+}
+

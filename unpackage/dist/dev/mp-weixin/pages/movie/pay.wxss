@@ -1,0 +1,77 @@
+page {
+  background-color: #F4F5F7;
+}
+.amount {
+  text-align: center;
+  padding-top: 80rpx;
+  color: #FE602B;
+  font-size: 72rpx;
+  font-weight: 550;
+}
+.amount text {
+  font-size: 36rpx;
+}
+.pay-tips {
+  text-align: center;
+  color: #636775;
+  font-size: 28rpx;
+  margin-top: 6rpx;
+}
+.pay-info-item {
+  margin: 70rpx 32rpx 0rpx 32rpx;
+  background-color: #FFFFFF;
+  border-radius: 20rpx;
+  padding: 40rpx 32rpx;
+}
+.pay-info-item .film-title {
+  color: #2D3039;
+  font-size: 36rpx;
+  font-weight: 550;
+  padding-bottom: 8rpx;
+}
+.pay-info-item .film-text {
+  margin-top: 12rpx;
+  color: #636775;
+  font-size: 28rpx;
+}
+.pay-item {
+  margin: 20rpx 25rpx 0rpx 25rpx;
+  background-color: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 26rpx 32rpx;
+  display: flex;
+  align-items: center;
+}
+.pay-item .item-left {
+  display: flex;
+  align-items: center;
+}
+.pay-item .item-left image {
+  width: 48rpx;
+  height: 48rpx;
+}
+.pay-item .item-left text {
+  color: #2D3039;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+.pay-item .pay-check {
+  margin-left: auto;
+  width: 36rpx;
+  height: 36rpx;
+}
+.pay-btns {
+  position: fixed;
+  bottom: 50rpx;
+  left: 32rpx;
+  right: 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #FE602B;
+  border-radius: 50rpx;
+  color: #FFFFFF;
+  font-size: 36rpx;
+  font-weight: 550;
+}
+

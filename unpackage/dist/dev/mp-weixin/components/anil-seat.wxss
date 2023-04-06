@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.sel-seat {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+.sel-seat .seat-head {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 30rpx;
+  position: relative;
+  z-index: 5;
+}
+.sel-seat .seat-head .sh-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333333;
+}
+.sel-seat .seat-head .sh-info {
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 10rpx;
+}
+.sel-seat .seat-main {
+  width: 100%;
+  position: relative;
+  padding: 10rpx;
+}
+.sel-seat .seat-main .vm-area {
+  width: 750rpx;
+}
+.sel-seat .seat-main .sm-title {
+  background-color: #dddddd;
+  width: 380rpx;
+  height: 34rpx;
+  -webkit-transform: perspective(34rpx) rotateX(-10deg);
+          transform: perspective(34rpx) rotateX(-10deg);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+.sel-seat .seat-main .sm-title .text {
+  font-size: 24rpx;
+  color: #333333;
+}
+.sel-seat .seat-main .sm-screen {
+  width: 100rpx;
+  height: 30rpx;
+  border: 1rpx solid #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 48rpx auto 0;
+  border-radius: 4rpx;
+  position: relative;
+  z-index: 1;
+}
+.sel-seat .seat-main .sm-screen .text {
+  font-size: 20rpx;
+  color: #999999;
+}
+.sel-seat .seat-main .sm-line-center {
+  height: 610rpx;
+  width: 0;
+  border: 1rpx dashed #e5e5e5;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  display: block;
+  z-index: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.sel-seat .seat-main .fix-tips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  position: fixed;
+  bottom: 214rpx;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 20rpx;
+}
+.sel-seat .seat-main .fix-tips .v-tips {
+  display: flex;
+  align-items: center;
+  color: #999;
+  margin: 0 10rpx;
+}
+.sel-seat .seat-main .fix-tips .v-tips .text {
+  margin-left: 10rpx;
+}
+.sel-seat .seat-main .sm-cell {
+  display: flex;
+  margin-top: 20rpx;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+.sel-seat .seat-main .sm-cell .sm-icon {
+  width: 100%;
+  height: 100%;
+}
+.sel-seat .seat-main .sm-line-index {
+  position: fixed;
+  top: 114rpx;
+  left: 20rpx;
+  border-radius: 14rpx;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20rpx;
+  width: 30rpx;
+}
+.sel-seat .seat-main .sm-line-index .text {
+  font-size: 24rpx;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.sel-seat .seat-foot {
+  margin-top: auto;
+  background-color: #ffffff;
+  padding: 20rpx 30rpx;
+  position: relative;
+  z-index: 5;
+}
+.sel-seat .seat-foot .sf-recommend, .sel-seat .seat-foot .sf-arselect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20rpx;
+}
+.sel-seat .seat-foot .sf-recommend .text, .sel-seat .seat-foot .sf-arselect .text {
+  font-size: 28rpx;
+  color: #666666;
+}
+.sel-seat .seat-foot .sf-recommend .sfr-tag, .sel-seat .seat-foot .sf-arselect .sfr-tag {
+  width: 110rpx;
+  height: 60rpx;
+  border-radius: 4rpx;
+  border: 1rpx solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20rpx;
+}
+.sel-seat .seat-foot .sf-arselect .text {
+  font-size: 24rpx;
+  color: #666666;
+}
+.sel-seat .seat-foot .sf-arselect .price {
+  font-size: 20rpx;
+  color: red;
+}
+.sel-seat .seat-foot .sf-arselect .scr-wrap {
+  display: flex;
+  white-space: nowrap;
+}
+.sel-seat .seat-foot .sf-arselect .sfr-selt {
+  height: 60rpx;
+  border-radius: 4rpx;
+  border: 1rpx solid #ccc;
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+  position: relative;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.sel-seat .seat-foot .sf-arselect .sfr-selt .sfr-close {
+  font-size: 20rpx;
+  color: #999;
+  margin-left: 10rpx;
+}
+.sel-seat .seat-foot .f-btn {
+  background-color: #F45664;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}
+.sel-seat .seat-foot .f-btn .text {
+  color: #ffffff;
+  font-size: 36rpx;
+}
+.sel-seat .seat-foot .f-btn.disabled {
+  opacity: .8;
+}
+

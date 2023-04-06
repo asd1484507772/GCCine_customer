@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/movie/index",
+    "pages/movie/cinema-list",
+    "pages/movie/choice-movie",
+    "pages/movie/pay-order",
+    "pages/movie/confirm-order",
+    "pages/movie/pay",
+    "pages/movie/moive-my",
+    "pages/movie/my-ticket",
+    "pages/movie/Seat",
+    "pages/cinema/cinema",
+    "pages/mine/mine",
+    "pages/selectCity/selectCity"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#959AA5",
+    "selectedColor": "#F05454",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home",
+        "iconPath": "static/icon/not_selected/dianying.png",
+        "selectedIconPath": "static/icon/selected/dianying.png"
+      },
+      {
+        "text": "影院",
+        "pagePath": "pages/cinema/cinema",
+        "iconPath": "static/icon/not_selected/yingyuan.png",
+        "selectedIconPath": "static/icon/selected/yingyuan.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/icon/not_selected/wode.png",
+        "selectedIconPath": "static/icon/selected/wode.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

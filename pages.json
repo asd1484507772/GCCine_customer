@@ -1,0 +1,152 @@
+{
+	"easycom": {
+		// "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "GCC电影购票",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/movie/index",
+			"style": {
+				"navigationBarTitleText": "GCC电影购票",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+
+			}
+
+		}, {
+			"path": "pages/movie/cinema-list",
+			"style": {
+				"navigationBarTitleText": "悬崖之上",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/movie/choice-movie",
+			"style": {
+				"navigationBarTitleText": "悬崖之上",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/movie/pay-order",
+			"style": {
+				"navigationBarTitleText": "支付订单",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/movie/confirm-order",
+			"style": {
+				"navigationBarTitleText": "确认订单",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/movie/pay",
+			"style": {
+				"navigationBarTitleText": "支付订单",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F4F5F7"
+			}
+
+		}, {
+			"path": "pages/movie/moive-my",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/movie/my-ticket",
+			"style": {
+				"navigationBarTitleText": "我的影票",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/movie/Seat",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/cinema/cinema",
+			"style": {
+				"navigationBarTitleText": "GCC电影购票",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+				
+			}
+			
+		}
+	    ,{
+            "path" : "pages/selectCity/selectCity",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8"
+	},
+	// 底部导航栏
+	"tabBar": {
+		// 未选中颜色
+		"color": "#959AA5",
+		// 选中颜色
+		"selectedColor": "#F05454",
+		"list": [{
+				"text": "首页",
+				"pagePath": "pages/home/home",
+				// 未选中图片
+				"iconPath": "static/icon/not_selected/dianying.png",
+				// 选中图片
+				"selectedIconPath": "static/icon/selected/dianying.png"
+			}, {
+				"text": "影院",
+				"pagePath": "pages/cinema/cinema",
+				"iconPath": "static/icon/not_selected/yingyuan.png",
+				"selectedIconPath": "static/icon/selected/yingyuan.png"
+			}, {
+				"text": "我的",
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/icon/not_selected/wode.png",
+				"selectedIconPath": "static/icon/selected/wode.png"
+			}
+
+		]
+	}
+}

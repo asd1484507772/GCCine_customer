@@ -1,0 +1,123 @@
+page {
+  background-color: #F4F5F7;
+}
+.miv-my-top {
+  height: 229rpx;
+}
+.miv-my-top image {
+  width: 100%;
+  height: 229rpx;
+}
+.my-main {
+  position: absolute;
+  top: 60rpx;
+  left: 0;
+  right: 0;
+  padding: 0rpx 32rpx;
+}
+.my-moive-order {
+  background-color: #FFFFFF;
+  border-radius: 20rpx;
+  padding: 40rpx 32rpx;
+}
+.my-moive-order .orer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.my-moive-order .orer-top .order-text {
+  color: #2D3039;
+  font-size: 32rpx;
+  font-weight: 550;
+}
+.my-moive-order .orer-top .order-rets {
+  display: flex;
+  align-items: center;
+}
+.my-moive-order .orer-top .order-rets text {
+  color: #A6A8AE;
+  font-size: 28rpx;
+}
+.my-moive-order .orer-top .order-rets image {
+  width: 28rpx;
+  height: 28rpx;
+}
+.ordere-tab-cart {
+  margin-top: 50rpx;
+  display: flex;
+}
+.ordere-tab-cart .order-tab-item {
+  width: 33.33%;
+  text-align: center;
+}
+.ordere-tab-cart .order-tab-item .tabs-text {
+  color: #636775;
+  font-size: 24rpx;
+}
+.ordere-tab-cart .order-tab-item image {
+  width: 64rpx;
+  height: 64rpx;
+}
+.my-record-cart {
+  margin-top: 20rpx;
+  background-color: #FFFFFF;
+  border-radius: 20rpx;
+  padding: 40rpx 32rpx;
+}
+.my-record-cart .my-record-text {
+  color: #2D3039;
+  font-size: 32rpx;
+  font-weight: 550;
+}
+.my-record-cart .my-record-list {
+  display: flex;
+  margin-top: 36rpx;
+}
+.my-record-cart .my-record-list .my-record-item {
+  width: 50%;
+  display: flex;
+}
+.my-record-cart .my-record-list .my-record-item .record-item-img {
+  width: 144rpx;
+  height: 174rpx;
+  border-radius: 16rpx;
+  background-color: #F3F4F7;
+}
+.my-record-cart .my-record-list .my-record-item .record-item-info {
+  margin-left: 24rpx;
+}
+.my-record-cart .my-record-list .my-record-item .record-item-info .record-info-tel {
+  color: #2D3039;
+  font-size: 28rpx;
+  font-weight: 550;
+  margin-top: 18rpx;
+}
+.my-record-cart .my-record-list .my-record-item .record-item-info .record-info-num {
+  color: #A6A8AE;
+  font-size: 24rpx;
+  margin-top: 11rpx;
+}
+.movie-boom {
+  display: flex;
+  align-items: center;
+  padding-top: 16rpx;
+  padding-bottom: 4rpx;
+  background-color: #FFFFFF;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.movie-boom .movie-boom-item {
+  width: 50%;
+  text-align: center;
+}
+.movie-boom .movie-boom-item image {
+  width: 48rpx;
+  height: 48rpx;
+}
+.movie-boom .movie-boom-item .boom-item-text {
+  color: #A2A4AA;
+  font-size: 20rpx;
+}
+

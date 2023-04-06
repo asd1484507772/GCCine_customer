@@ -1,0 +1,119 @@
+.cinema-top {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  padding: 30rpx 32rpx;
+  z-index: 9999;
+}
+.list-type {
+  color: #FFFFFF;
+  font-size: 24rpx;
+  margin-top: 12rpx;
+}
+.list-type text {
+  color: #FF6E06;
+  font-size: 550;
+  margin-right: 8rpx;
+}
+.cinema-down {
+  display: flex;
+  align-items: center;
+  padding: 22rpx 32rpx;
+  border-bottom: 2rpx solid #DFE0E2;
+}
+.cinema-down .down-city {
+  display: flex;
+  align-items: center;
+}
+.cinema-down .down-city text {
+  color: #636775;
+  font-size: 28rpx;
+}
+.cinema-down .down-city image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 8rpx;
+}
+.cinema-down .serchs {
+  margin-left: auto;
+  width: 44rpx;
+  height: 44rpx;
+}
+.cinema-list {
+  margin: 0rpx 32rpx;
+  border-bottom: 2rpx solid #DFE0E2;
+  padding: 32rpx 0rpx 40rpx 0rpx;
+}
+.cinema-list .cinema-name {
+  color: #2D3039;
+  font-size: 32rpx;
+  font-weight: 550;
+}
+.cinema-list .cinema-address-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+.cinema-list .cinema-address-item .address-text {
+  color: #636775;
+  font-size: 24rpx;
+  width: 78%;
+}
+.cinema-list .cinema-address-item .distance {
+  color: #636775;
+  font-size: 28rpx;
+}
+.sessions {
+  color: #636775;
+  font-size: 24rpx;
+  margin-top: 24rpx;
+}
+.region-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 20rpx;
+}
+.region-top .region-left {
+  width: 75%;
+  border-radius: 40rpx;
+  height: 68rpx;
+  background-color: #F5F6F8;
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+}
+.region-top .region-val {
+  width: 90%;
+  font-size: 30rpx;
+}
+.region-top .region-btn {
+  background: linear-gradient(207deg, #FF9272 0%, #FC5421 100%);
+  border-radius: 50rpx;
+  height: 68rpx;
+  text-align: center;
+  width: 140rpx;
+  line-height: 68rpx;
+  color: #FFFFFF;
+  font-size: 24rpx;
+  font-weight: 550;
+}
+.region-list {
+  padding: 22rpx 35rpx;
+  color: #2D3039;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #E2E2E2;
+}
+.empty {
+  text-align: center;
+  padding-top: 30rpx;
+  color: #787A82;
+  font-size: 24rpx;
+}
+

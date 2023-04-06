@@ -1,0 +1,133 @@
+.cinema-top {
+  background-color: #636775;
+  padding: 32rpx 32rpx 70rpx 32rpx;
+  position: relative;
+}
+.cinema-top .tops-item {
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+}
+.cinema-top .cinema-img {
+  width: 160rpx;
+  height: 222rpx;
+}
+.cinema-top .cinema-img image {
+  width: 160rpx;
+  height: 222rpx;
+  border-radius: 20rpx;
+}
+.cinema-top .cinema-info {
+  margin-left: 30rpx;
+}
+.cinema-top .cinema-info .top-name {
+  color: #FFFFFF;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.cinema-top .cinema-info .list-tel {
+  color: #D8D8DD;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.order-infos {
+  background-color: #343F47;
+  border-radius: 30rpx 30rpx 0rpx 0rpx;
+  height: 128rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 32rpx 0rpx 32rpx;
+  position: absolute;
+  top: 290rpx;
+  left: 0;
+  right: 0;
+  color: #FFFFFF;
+  font-size: 28rpx;
+}
+.ticket-method {
+  border-radius: 30rpx 30rpx 20rpx 20rpx;
+  background-color: #FFFFFF;
+  padding: 0rpx 32rpx;
+  position: absolute;
+  top: 390rpx;
+  left: 0;
+  right: 0;
+}
+.ticket-method .method-text {
+  margin-top: 50rpx;
+  color: #2D3039;
+  font-size: 28rpx;
+}
+.ticket-option {
+  margin-top: 50rpx;
+  display: flex;
+}
+.ticket-option .option-img {
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 10rpx;
+}
+.ticket-option .option-img image {
+  width: 36rpx;
+  height: 36rpx;
+}
+.ticket-option .option-info {
+  margin-left: 30rpx;
+  width: 67%;
+}
+.ticket-option .option-info .option-top {
+  display: flex;
+  align-items: center;
+}
+.ticket-option .option-info .option-top .opt-tel {
+  color: #2D3039;
+  font-size: 28rpx;
+  font-weight: 550;
+}
+.ticket-option .option-info .option-top .opt-tag {
+  padding: 2rpx 8rpx;
+  background-color: #FFE2E1;
+  border-radius: 4rpx;
+  color: #F03D38;
+  font-size: 18rpx;
+  margin-left: 12rpx;
+}
+.ticket-option .option-info .opt-time {
+  margin-top: 12rpx;
+  color: #636775;
+  font-size: 24rpx;
+}
+.ticket-option .option-info .opt-time text {
+  color: #FE602B;
+  font-weight: 550;
+  margin-left: 12rpx;
+}
+.ticket-option .option-info .opt-texts {
+  color: #A6A8AE;
+  font-size: 24rpx;
+  margin-top: 7rpx;
+}
+.ticket-option .option-price {
+  margin-left: auto;
+  color: #2D3039;
+  font-size: 24rpx;
+}
+.ticket-option .option-price text {
+  font-size: 36rpx;
+  margin: 0rpx 4rpx;
+}
+.confirm-btn {
+  position: fixed;
+  bottom: 70rpx;
+  left: 50rpx;
+  right: 50rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+  background: linear-gradient(207deg, #FF9272 0%, #FC5421 100%);
+  border-radius: 55rpx;
+  color: #FFFFFF;
+  font-size: 36rpx;
+  font-weight: 500;
+}
+

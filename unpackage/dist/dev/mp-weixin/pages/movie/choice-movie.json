@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "悬崖之上",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "swipers": "/components/u-swiper"
+  }
+}

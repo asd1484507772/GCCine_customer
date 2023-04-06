@@ -1,0 +1,1 @@
+<view><anil-seat vue-id="06e383c9-1" title="{{movieInfo.movieName}}" info="{{timeData+'|'+movieInfo.movieType}}" room-name="{{officeInfo.hallName}}" max="{{max}}" seatData="{{dataList}}" data-event-opts="{{[['^confirm',[['getInfo']]]]}}" bind:confirm="__e" bind:__l="__l"></anil-seat></view>
