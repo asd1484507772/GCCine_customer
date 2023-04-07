@@ -34,8 +34,8 @@
 								</view>
 							</view>
 							<!-- 购票按钮 -->
-							<view class="movie-btns" v-if="tanIndex==1">购票</view>
-							<view class="movie-btns-presale" v-if="tanIndex!=1">预售</view>
+							<view class="movie-btns" v-show="tanIndex==1">购票</view>
+							<view class="movie-btns-presale" v-show="tanIndex!=1">预售</view>
 							
 						</view>
 						<u-loadmore :status="status" :load-text="loadText"/>
@@ -48,6 +48,7 @@
 </template>
 
 <script>
+	import { debounce } from "lodash";
 	export default {
 		name:"List",
 		props: {
@@ -86,7 +87,6 @@
 				endIndex: 0,
 				scrollTop:0,
 				showList:[],
-				listTop:0,
 				// 下拉加载更多状态
 				status: 'loadmore',
 				// 状态对应文字
@@ -103,7 +103,10 @@
 			      return this.itemHeight * (this.showNumber-1) + 'px'
 			    },
 				// 列表向上滚动时要动态改变 top 值
-				
+				listTop() {
+					// 在这需要获得一个可以被itemHeight整除的数来作为item的偏移量，这样随机滑动时第一条数据都是完整显示的
+				    return this.scrollTop - (this.scrollTop % this.itemHeight);
+				},
 				
 				
 		},
@@ -118,19 +121,24 @@
 				this.startIndex = Math.floor(this.scrollTop/this.itemHeight);   //可视区域第一条数据的索引
 				this.endIndex = this.startIndex + this.showNumber;   //可视区域最后一条数据的后面那条数据的索引
 				this.showList = this.items.slice(this.startIndex, this.endIndex)  //可视区域显示的数据，即最后要渲染的数据。实际的数据索引是从this.startIndex到this.endIndex-
-				this.listTop = this.scrollTop - (this.scrollTop % this.itemHeight);  //在这需要获得一个可以被itemHeight整除的数来作为item的偏移量，这样随机滑动时第一条数据都是完整显示的
-				console.log(this.scrollTop,this.scrollTop % this.itemHeight)
+		
 			},
 			 // 容器的滚动事件
-			handleScroll (e) {
+			handleScroll:debounce(function (e) {
 			  // 获取容器顶部滚动的尺寸
 			this.scrollTop = e.detail.scrollTop
 			// 计算卷去的数据条数，用计算的结果作为获取数据的起始和结束下标
 			// 起始的下标就是卷去的数据条数，向下取整
-			
+			if (!this.scrollAnimationFrame) {
+			    this.scrollAnimationFrame = requestAnimationFrame(() => {
+			      this.getShowList();
+			      this.scrollAnimationFrame = null;
+			    });
+			}
+			  
 			// 结束的下标就是起始的下标加上要展示的数据条数
-			this.getShowList()
-			},
+			
+			},100),
 				
 			handleScrollToLower(){
 				this.status = "loading"
@@ -160,7 +168,7 @@
 	}
 </script>
 
-<style lang="less">
+<style scoped lang="less" >
 	.scroll-box{
 		margin-bottom: 20rpx;
 		position: relative;
