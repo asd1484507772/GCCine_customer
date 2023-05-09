@@ -46,6 +46,7 @@
 </template>
 
 <script>
+	
 	// import {cinemaList,getCity} from "@/api/film.js"
 	import config from "@/utils/config.js"
 	export default {
@@ -94,6 +95,7 @@
 			}
 		},
 		onLoad(option) {
+			uni.$ajax.get({url:'/movies',withCredentials: true})
 			let _this = this
 			const eventChannel = this.getOpenerEventChannel();
 			eventChannel.on('filmDataFromOpene', function(data) {
