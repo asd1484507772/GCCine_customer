@@ -2,6 +2,9 @@
 // #ifndef VUE3
 import Vue from 'vue'
 import App from './App'
+import store from './store'
+
+Vue.prototype.$store = store
 
 // 引入框架
 import uView from '@/uni_modules/uview-ui'
@@ -18,6 +21,7 @@ uni.$ajax = ajax
 App.mpType = 'app'
 
 const app = new Vue({
+	store,
     ...App
 })
 app.$mount()

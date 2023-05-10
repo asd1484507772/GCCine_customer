@@ -1,55 +1,43 @@
 <template>
 	<view>
-		<view class="cinema-top">
-			<!-- <view class="tops-item">
-				<view class="cinema-img">
-					<image :src="filmInfo.posterUrl"></image>
-				</view>
-				<view class="cinema-info">
-					<view class="cinema-info-top">
-						<view class="top-name">{{filmInfo.movieName}}</view>
-						<view class="top-type">3D IMAX</view>
-					</view>
-					<view class="rate-item">
-						<u-rate :count="5" :disabled="true" v-model="filmInfo.grade" inactive-color="#ffffff"
-							active-color="#FF6E06" :size="30"></u-rate>
-						<text class="rate-nun">{{filmInfo.grade}}</text>
-					</view>
-					<view class="list-type">{{filmInfo.movieType}}|{{filmInfo.duration}}分钟</view>
-					<view class="list-type">{{filmInfo.publishDate}} 上映</view>
-					<view class="list-type"><text>{{filmInfo.like}}</text>人想看</view>
-				</view>
-			</view> -->
-		</view>
+
 
 		<view class="cinema-down">
-			<view class="down-city" @click="show = true">
+			<!-- <view class="down-city" @click="show = true">
 				<text>{{position.city}}</text>
 				<image src="../../static/images/movie-xiala.png"></image>
-			</view>
-			<view class="down-city" style="margin-left: 80rpx;">
-				<text>全城</text>
+			</view> -->
+			<view class="down-city">
+				<text @click="openAddres">{{city}}</text>
 				<image src="../../static/images/movie-xiala.png"></image>
 			</view>
 			<!-- <image src="../../static/images/movie-serchs.png" class="serchs"></image> -->
 		</view>
 
-		<view class="cinema-list" v-for="(value,index) in dataList" :key="index" @click="getDataUrl(value)">
-			<view class="cinema-name">{{value.cinemaName}}</view>
+		<view class="cinema-list" v-for="(item,index) in dataList" :key="index" @click="getDataUrl(value)">
+			<view class="cinema-name">{{item.name}}</view>
 			<view class="cinema-address-item">
-				<view class="address-text">{{value.cinemaAddress}}</view>
-				<view class="distance">{{value.distance}}km</view>
+				<view class="address-text">{{item.address}}</view>
+				<view class="distance">{{0}}km</view>
 			</view>
 			<!-- <view class="sessions">近期场次：05/29 10:15 I 05/29 12:15 I 05/29 14:15</view> -->
 		</view>
+		<simple-address ref="simpleAddress" :pickerValueDefault="cityPickerValueDefault" @onConfirm="onConfirm"
+			themeColor="#007AFF"></simple-address>
 	</view>
 </template>
 
 <script>
-	
 	// import {cinemaList,getCity} from "@/api/film.js"
-	import config from "@/utils/config.js"
+	// import config from "@/utils/config.js"
+	import {
+		mapGetters
+	} from 'vuex' //引入mapGetters
+	import simpleAddress from '@/components/simple-address/simple-address.vue';
 	export default {
+		components: {
+			simpleAddress
+		},
 		data() {
 			return {
 				rateValue: 3,
@@ -83,9 +71,17 @@
 				cityShowList: [],
 				isLoad: false,
 				show: false,
-				keyWord: ''
+				keyWord: '',
+				cityPickerValueDefault: [0, 0, 1],
 			}
 		},
+		computed: {
+			...mapGetters([
+				'city',
+			])
+		},
+
+
 		onReachBottom() {
 			if (this.isPage) {
 				this.page++
@@ -95,7 +91,20 @@
 			}
 		},
 		onLoad(option) {
-			uni.$ajax.get({url:'/movies',withCredentials: true})
+			uni.$ajax.get({
+				url: '/cinemas',
+				withCredentials: true
+			}).then(({
+				data: {
+					isSuccess,
+					data
+				}
+			}) => {
+				if (isSuccess) {
+					this.dataList = data
+					console.log(this.dataList)
+				}
+			})
 			let _this = this
 			const eventChannel = this.getOpenerEventChannel();
 			eventChannel.on('filmDataFromOpene', function(data) {
@@ -107,6 +116,10 @@
 
 		},
 		methods: {
+			openAddres() {
+				this.cityPickerValueDefault = [0, 0, 1]
+				this.$refs.simpleAddress.open();
+			},
 
 			getDataUrl(data) {
 				uni.navigateTo({
@@ -114,6 +127,32 @@
 						encodeURIComponent(JSON.stringify(data))
 				})
 			},
+			onConfirm(e) {
+				uni.getLocation({
+					type: 'wgs84',
+					geocode: true, //设置该参数为true可直接获取经纬度及城市信息
+					success: function(res) {
+						console.log(res)
+					},
+					fail: function() {
+						uni.showToast({
+							title: '获取地址失败，将导致部分功能不可用',
+							icon: 'none'
+						});
+					}
+				});
+
+				// uni.getLocation({
+
+				// 	geocode: true,
+				// 	success: function(res) {
+				// 		console.log(res)
+				// 		console.log('当前位置的经度：' + res.longitude);
+				// 		console.log('当前位置的纬度：' + res.latitude);
+				// 	}
+				// });
+
+			}
 		}
 	}
 </script>
@@ -135,6 +174,7 @@
 		padding: 30rpx 32rpx;
 		z-index: 9999;
 	}
+
 	// .cinema-top {
 	// 	background-color: #636775;
 	// 	padding: 32rpx;

@@ -1,8 +1,8 @@
 <template>
 	<view>
 		<view class="movie-top">
-			<view class="top-region" @click="getShow">
-				<text>{{cityInfo.city}}</text>
+			<view class="top-region" @click="openAddres">
+				<text>{{city}}</text>
 				<image src="../../static/images/movie-xiala.png"></image>
 			</view>
 
@@ -16,9 +16,11 @@
 			<!-- <image src="../../static/images/movie-serchs.png" class="sechut"></image> -->
 		</view>
 		<view class="movie-main">
-			<List :tanIndex="tanIndex" :cityInfo="cityInfo" :items="dataList" :itemHeight="156" :showNumber="5" ></List>
+			<List :tanIndex="tanIndex" :cityInfo="cityInfo" :items="dataList" :itemHeight="156" :showNumber="5"></List>
 
 		</view>
+		<simple-address ref="simpleAddress" :pickerValueDefault="cityPickerValueDefault" @onConfirm="onConfirm"
+			themeColor="#007AFF"></simple-address>
 
 
 		<!-- <view class="movie-boom">
@@ -40,16 +42,19 @@
 
 <script>
 	// import {filmList,getCity} from "@/api/film.js"
-	import config from "@/utils/config.js"
-	import ssSelectCity from '@/components/ss-select-city/index.vue'
+	// import config from "@/utils/config.js"
+	// import ssSelectCity from '@/components/ss-select-city/index.vue'
+	import {mapGetters} from 'vuex' //引入mapGetters
+	import simpleAddress from '@/components/simple-address/simple-address.vue';
 	import List from "@/components/List/List.vue"
 	export default {
 		components: {
-			ssSelectCity,
-			List
+			List,
+			simpleAddress
 		},
 		data() {
 			return {
+				cityPickerValueDefault: [0, 0, 1],
 				hotCitys: [
 					'杭州',
 					'天津',
@@ -198,7 +203,7 @@
 					},
 				],
 				rateValue: 3,
-				tanIndex:1,
+				tanIndex: 1,
 				index: 0,
 				show: false,
 				cityList: [],
@@ -212,6 +217,15 @@
 				soonList: [], //所有即将上映数据
 				page: 1
 			}
+		},
+		computed: {
+			...mapGetters([
+				'city',
+			])
+			// selectCity() {
+			// 	console.log(s)
+			// 	return 'asdasd'
+			// }
 		},
 		onLoad() {
 
@@ -228,11 +242,15 @@
 			// }
 		},
 		methods: {
+			openAddres() {
+				this.cityPickerValueDefault = [0, 0, 1]
+				this.$refs.simpleAddress.open();
+			},
 			getShow() {
 				this.show = !this.show
 			},
 
-			
+
 			gettab(type, index) {
 				this.index = index
 				if (this.tanIndex != type) {
@@ -251,8 +269,9 @@
 <style lang="less">
 	page {
 		background-color: #F4F5F7;
-		
+
 	}
+
 	.movie-top {
 		display: flex;
 		justify-content: space-between;
@@ -323,9 +342,7 @@
 		height: 44rpx;
 	}
 
-	.movie-main {
-		
-	}
+	.movie-main {}
 
 	// .movie-list {
 	// 	margin: 20rpx 25rpx 0rpx 25rpx;
